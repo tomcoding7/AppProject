@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Video Call</title>
+    <style>
+      #localVideo,
+      #remoteVideo {
+        width: 45%;
+        border: 1px solid black;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Video Call</h1>
+    <div>
+      <label for="videoSource">Video source: </label>
+      <select id="videoSource"></select>
+      <label for="audioSource">Audio source: </label>
+      <select id="audioSource"></select>
+    </div>
+    <video id="localVideo" autoplay muted></video>
+    <video id="remoteVideo" autoplay></video>
+    <button id="startCall">Start Call</button>
+    <button id="endCall">End Call</button>
+    <h2>Available Users</h2>
+    <ul id="users"></ul>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
